@@ -4,6 +4,10 @@
 [![Plataforma: Wokwi](https://img.shields.io/badge/Plataforma-Wokwi-blue.svg)]()
 [![Broker: HiveMQ](https://img.shields.io/badge/Broker-HiveMQ_Cloud-orange.svg)]()
 
+## 👥 Feito por:
+* **Nome:** Pedro Sakai - **RM:** 565956
+
+
 Projeto de monitoramento de temperatura e distância utilizando ESP32, integrando dados de sensores reais com APIs externas e persistência em banco de dados relacional.
 
 ## 📋 Descrição do Projeto
@@ -13,7 +17,7 @@ O sistema simula o monitoramento de uma máquina. O **ESP32** coleta dados de te
 A solução foi desenhada seguindo a arquitetura de referência para sistemas IoT:
 
 1.  **Sensores (Camada de Percepção):** DHT22 (Temperatura) e HC-SR04 (Distância).
-2.  **Processamento na Borda:** ESP32 realizando a leitura e publicação MQTT.
+2.  **Processamento:** ESP32 realizando a leitura e publicação MQTT.
 3.  **Comunicação (MQTT):** Envio seguro via TLS (porta 8883) para o HiveMQ Cloud.
 4.  **Backend (Node-RED):** Orquestração dos dados, consumo de API ViaCEP e integração MySQL.
 5.  **Visualização (Dashboard):** Interface HTML para monitoramento em tempo real.
@@ -26,6 +30,12 @@ A solução foi desenhada seguindo a arquitetura de referência para sistemas Io
 *   **Orquestrador:** Node-RED
 *   **Banco de Dados:** MySQL
 *   **API Externa:** ViaCEP
+
+## DASHBOARD
+![Dashboard](assets/dashboard.png)
+
+## ESP32 simulado no Wokwi
+![ESP32 no Wokwi](assets/esp.png)
 
 ## ⚙️ Instruções de Execução
 
