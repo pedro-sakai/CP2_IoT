@@ -39,14 +39,14 @@ A solução foi desenhada seguindo a arquitetura de referência para sistemas Io
 
 ## ⚙️ Instruções de Execução
 
-###1. Configuração do ESP32
+### 1. Configuração do ESP32
 No Wokwi, abra o código do sketch.ino.
 
 Configure as constantes mqtt_user e mqtt_pass com suas credenciais do HiveMQ Cloud.
 
 Inicie a simulação.
 
-###2. Configuração do Node-RED
+### 2. Configuração do Node-RED
 Importe o arquivo flows.json.
 
 Instale as bibliotecas node-red-dashboard e node-red-node-mysql através do menu "Manage Palette".
