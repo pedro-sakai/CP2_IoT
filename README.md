@@ -12,7 +12,7 @@ O sistema simula o monitoramento de uma máquina. O **ESP32** coleta dados de te
 ## 🏗️ Arquitetura da Solução
 A solução foi desenhada seguindo a arquitetura de referência para sistemas IoT:
 
-1.  **Sensores (Camada de Percepção):** DHT22 (Temperatura) e HC-SR04 (Ultrassônico).
+1.  **Sensores (Camada de Percepção):** DHT22 (Temperatura) e HC-SR04 (Distância).
 2.  **Processamento na Borda:** ESP32 realizando a leitura e publicação MQTT.
 3.  **Comunicação (MQTT):** Envio seguro via TLS (porta 8883) para o HiveMQ Cloud.
 4.  **Backend (Node-RED):** Orquestração dos dados, consumo de API ViaCEP e integração MySQL.
@@ -24,18 +24,28 @@ A solução foi desenhada seguindo a arquitetura de referência para sistemas Io
 *   **Protocolo:** MQTT (PubSubClient)
 *   **Serviço de Nuvem:** HiveMQ Cloud
 *   **Orquestrador:** Node-RED
-*   **Banco de Dados:** MySQL (Local ou Remoto)
+*   **Banco de Dados:** MySQL
 *   **API Externa:** ViaCEP
-
-## 📂 Organização do Repositório
-*   `/sketch`: Código fonte (.ino) para o ESP32.
-*   `/flows`: Arquivo JSON para importação do fluxo no Node-RED.
-*   `/sql`: Script de criação da tabela no MySQL.
-*   `/assets`: Imagens e diagramas do projeto.
 
 ## ⚙️ Instruções de Execução
 
-### 1. Configuração do Banco de Dados
+###1. Configuração do ESP32
+No Wokwi, abra o código do sketch.ino.
+
+Configure as constantes mqtt_user e mqtt_pass com suas credenciais do HiveMQ Cloud.
+
+Inicie a simulação.
+
+###2. Configuração do Node-RED
+Importe o arquivo flows.json.
+
+Instale as bibliotecas node-red-dashboard e node-red-node-mysql através do menu "Manage Palette".
+
+No nó MQTT, configure o servidor Cloud e habilite o TLS.
+
+No nó MySQL, insira as credenciais do seu banco de dados.
+
+### 3. Configuração do Banco de Dados
 Crie a tabela necessária utilizando o script abaixo:
 ```sql
 CREATE DATABASE projeto_iot;
@@ -49,3 +59,4 @@ CREATE TABLE monitoramento (
     cidade VARCHAR(100),
     data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
