@@ -58,15 +58,13 @@ No nó MySQL, insira as credenciais do seu banco de dados.
 ### 3. Configuração do Banco de Dados
 Crie a tabela necessária utilizando o script abaixo:
 ```sql
-CREATE DATABASE projeto_iot;
+CREATE DATABASE IF NOT EXISTS projeto_iot;
 USE projeto_iot;
 
-CREATE TABLE monitoramento (
+CREATE TABLE IF NOT EXISTS monitoramento (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    temperatura FLOAT,
-    distancia FLOAT,
-    cep VARCHAR(10),
-    cidade VARCHAR(100),
-    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    sensor_tipo VARCHAR(50),
+    valor FLOAT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
