@@ -1,0 +1,688 @@
+[
+    {
+        "id": "efc87a8dca91b3a1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d0324522019d2f0a",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "cp2_iot",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "7ed890040c74a623",
+        "type": "ui_tab",
+        "name": "Cp2 IoT",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8e52fa6913f95a0e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "08893d0644847725",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "7ed890040c74a623",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c348079bc91e5af6",
+        "type": "ui_group",
+        "name": "Distância",
+        "tab": "7ed890040c74a623",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6ec1a49364e8f839",
+        "type": "tls-config",
+        "name": "hivemq-tls",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "951b8cd6fb73a00d",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "7b4ffbd40fc844f9ab5582772cea1c8e.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "6ec1a49364e8f839",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6a58e5c43096facc",
+        "type": "ui_group",
+        "name": "ViaCep",
+        "tab": "7ed890040c74a623",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "394df3d572d08933",
+        "type": "mqtt in",
+        "z": "efc87a8dca91b3a1",
+        "name": "",
+        "topic": "maquina1/temperatura",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "951b8cd6fb73a00d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "81ecd22296e090f1",
+                "6994ea82753120cf",
+                "ac10d7d8831f4bf9",
+                "abc176525557fdb5"
+            ]
+        ]
+    },
+    {
+        "id": "ac10d7d8831f4bf9",
+        "type": "function",
+        "z": "efc87a8dca91b3a1",
+        "name": "function 1",
+        "func": "var valor = msg.payload;\nmsg.topic = \"INSERT INTO monitoramento (sensor_tipo, valor) VALUES ('temperatura', \" + valor + \")\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 180,
+        "wires": [
+            [
+                "00a61c502e15ff7d",
+                "4971f4b426714e35"
+            ]
+        ]
+    },
+    {
+        "id": "00a61c502e15ff7d",
+        "type": "mysql",
+        "z": "efc87a8dca91b3a1",
+        "mydb": "d0324522019d2f0a",
+        "name": "",
+        "x": 880,
+        "y": 420,
+        "wires": [
+            [
+                "f9685fff9455c975"
+            ]
+        ]
+    },
+    {
+        "id": "8090f5c3b020766d",
+        "type": "inject",
+        "z": "efc87a8dca91b3a1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "6dd834d03f6f0451"
+            ]
+        ]
+    },
+    {
+        "id": "6dd834d03f6f0451",
+        "type": "function",
+        "z": "efc87a8dca91b3a1",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 500,
+        "wires": [
+            [
+                "00a61c502e15ff7d",
+                "af81585d3d0f15e5"
+            ]
+        ]
+    },
+    {
+        "id": "f9685fff9455c975",
+        "type": "debug",
+        "z": "efc87a8dca91b3a1",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a518c7eefa564de4",
+        "type": "mqtt in",
+        "z": "efc87a8dca91b3a1",
+        "name": "",
+        "topic": "maquina1/distancia",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "951b8cd6fb73a00d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "a0285efaef1839ae",
+                "a8aef4c3e0075c9c",
+                "69145f941a10969c",
+                "f3ceba8cb29fec1c"
+            ]
+        ]
+    },
+    {
+        "id": "69145f941a10969c",
+        "type": "function",
+        "z": "efc87a8dca91b3a1",
+        "name": "function 3",
+        "func": "var valor = msg.payload;\nmsg.topic = \"INSERT INTO monitoramento (sensor_tipo, valor) VALUES ('distancia', \" + valor + \")\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 420,
+        "wires": [
+            [
+                "00a61c502e15ff7d",
+                "dd3164ab4d3a44b6"
+            ]
+        ]
+    },
+    {
+        "id": "81ecd22296e090f1",
+        "type": "ui_gauge",
+        "z": "efc87a8dca91b3a1",
+        "name": "",
+        "group": "08893d0644847725",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura da máquina",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 450,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6994ea82753120cf",
+        "type": "ui_chart",
+        "z": "efc87a8dca91b3a1",
+        "name": "",
+        "group": "08893d0644847725",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Histórico em tempo real",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0285efaef1839ae",
+        "type": "ui_gauge",
+        "z": "efc87a8dca91b3a1",
+        "name": "",
+        "group": "c348079bc91e5af6",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Distância",
+        "label": "cm",
+        "format": "{{value}}",
+        "min": "1",
+        "max": "400",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 420,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a8aef4c3e0075c9c",
+        "type": "ui_chart",
+        "z": "efc87a8dca91b3a1",
+        "name": "",
+        "group": "c348079bc91e5af6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Histórico em tempo real",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "abc176525557fdb5",
+        "type": "debug",
+        "z": "efc87a8dca91b3a1",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 160,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f3ceba8cb29fec1c",
+        "type": "debug",
+        "z": "efc87a8dca91b3a1",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 180,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4971f4b426714e35",
+        "type": "debug",
+        "z": "efc87a8dca91b3a1",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "dd3164ab4d3a44b6",
+        "type": "debug",
+        "z": "efc87a8dca91b3a1",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "af81585d3d0f15e5",
+        "type": "debug",
+        "z": "efc87a8dca91b3a1",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "c75b85f23a88bce3",
+        "type": "http request",
+        "z": "efc87a8dca91b3a1",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://viacep.com.br/ws/01001000/json/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 700,
+        "wires": [
+            [
+                "326aaedd290a8f73"
+            ]
+        ]
+    },
+    {
+        "id": "96fac75456b71c73",
+        "type": "inject",
+        "z": "efc87a8dca91b3a1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "c75b85f23a88bce3"
+            ]
+        ]
+    },
+    {
+        "id": "326aaedd290a8f73",
+        "type": "json",
+        "z": "efc87a8dca91b3a1",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 700,
+        "wires": [
+            [
+                "82948488b5a0cae6"
+            ]
+        ]
+    },
+    {
+        "id": "82948488b5a0cae6",
+        "type": "ui_template",
+        "z": "efc87a8dca91b3a1",
+        "group": "6a58e5c43096facc",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div\n    style=\"background-color: #2c3e50; color: white; padding: 15px; border-radius: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n    <h3 style=\"margin-top: 0; color: #3498db; border-bottom: 2px solid #3498db;\">Informações do CEP</h3>\n    <div style=\"display: flex; flex-direction: column; gap: 8px;\">\n        <div><strong>Logradouro:</strong> {{msg.payload.logradouro}}</div>\n        <div><strong>Bairro:</strong> {{msg.payload.bairro}}</div>\n        <div><strong>Cidade:</strong> {{msg.payload.localidade}} - {{msg.payload.uf}}</div>\n        <div><strong>CEP:</strong> {{msg.payload.cep}}</div>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    }
+]
